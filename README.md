@@ -1,5 +1,5 @@
 # python-codes
-A collection of my python codes for my personal use
+A collection of my python codes for my personal use.
 
 --
 ## python codes in here
