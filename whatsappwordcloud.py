@@ -9,7 +9,7 @@ words=[]
 for line in f:
  try:
   temp = line.split(': ')[2];
-  if('Media' not in temp): # If any form of media is sent, WhatsApp prints "<Media Omitted>". Getting rid of this. TO DO: Improve this functionality. 
+  if('image omitted' not in temp): 
    print temp 
    words.append(temp)
  except:
