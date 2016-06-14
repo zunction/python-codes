@@ -21,3 +21,9 @@ Need to improve on its functionality of recognising names of friends.
 ```python
 whatsappwordcloud.py *name_of_text_file*
 ```
+
+- numbergame.py
+a game of the game zhong ji mi ma. Game take is the smallest and largest number to determine the range of the values and randomly selects a number. Player who chooses the choosen number loses. Running it in terminal/command prompt will automatically prompt you for the range.
+```python
+python numbergame.py
+```
