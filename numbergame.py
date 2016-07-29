@@ -10,13 +10,13 @@ def secret_number(a, b):
 
 def print_response(x, s, a, b):
     if x < a or x > b:
-        print 'Please enter a number between %d and %d' % (a, b)
+        print ('Please enter a number between %d and %d' % (a, b))
         return a, b
     if x > s:
-        print 'The number is between %d and %d' % (a, x)
+        print ('The number is between %d and %d' % (a, x))
         return a, x
     else:
-        print 'The number is between %d and %d' % (x, b)
+        print ('The number is between %d and %d' % (x, b))
         return x, b
 
 def run_zjmm(a, b):
@@ -26,10 +26,11 @@ def run_zjmm(a, b):
         a, b = print_response(guess, s, a, b)
         guess = int(raw_input('Make a guess: '))
     else:
-        print 'ZJMM!'
+        print ('ZJMM!')
 
+if __name__ == "__main__":
 
-a = int(raw_input('Enter the smallest number:'))
-b = int(raw_input('Enter the largest number:'))
+    a = int(raw_input('Enter the smallest number:'))
+    b = int(raw_input('Enter the largest number:'))
 
-run_zjmm(a, b)
+    run_zjmm(a, b)
