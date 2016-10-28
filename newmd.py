@@ -1,23 +1,33 @@
 import sys
 from datetime import datetime
 
+# TEMPLATE = """
+# Title: {title}
+# Date: {year}-{month:02d}-{day:02d} {hour}:{minute:02d}
+# Category:
+# Tags:
+# Slug: {slug}
+# Author: zhangsheng
+# Summary:
+# Status: draft
+#
+#
+# """
+
 TEMPLATE = """
 Title: {title}
 Date: {year}-{month:02d}-{day:02d} {hour}:{minute:02d}
-Category: 
-Tags: 
+Tags:
 Slug: {slug}
-Author: zunction
-Summary: 
-Status: draft
-
-
+Author: zhangsheng
 """
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
-    author = 'zunction'
-    f_create = "{}.md".format(slug)
+    date = str(today.year) + '-' + str('{:02d}'.format(today.month)) + '-' + str('{:02d}'.format(today.day))
+    filename = date + '-' + slug
+    author = 'zhangsheng'
+    f_create = "{}.md".format(filename)
     t = TEMPLATE.strip().format(title=title,
                                 year=today.year,
                                 month=today.month,
@@ -35,4 +45,4 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         make_entry(sys.argv[1])
     else:
-        print('Need a "Title"') 
+        print('Need a "Title"')
